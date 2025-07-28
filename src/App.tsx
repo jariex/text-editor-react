@@ -18,6 +18,7 @@ function App() {
         <img src="/doc-icon.svg" alt="document icon" className="doc-icon" />
         <h1>Cool Text Editor</h1>
       </header>
+
       <TextEditor />
     </div>
   );

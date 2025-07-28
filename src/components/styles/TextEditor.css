@@ -142,3 +142,122 @@ header {
     font-size: 20px;
   }
 }
+
+/* Panel lateral */
+.doc-selector {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 220px;
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.doc-selector h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #1d66e6;
+}
+
+.doc-selector input {
+  height: 20px;
+  width: 80%;
+  padding: 5px 12px;
+  border: 2px solid #1fbdecd1;
+  border-radius: 16px;
+  margin-bottom: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #333;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.doc-selector input:hover {
+  border-color: #1d66e6;
+  box-shadow: 0 2px 8px rgba(29, 102, 230, 0.15);
+}
+
+.doc-selector input:focus {
+  border-color: #1d66e6;
+  box-shadow: 0 0 0 2px rgba(29, 102, 230, 0.2);
+  transform: scale(1.02);
+}
+
+.doc-selector input::placeholder {
+  color: #aaa;
+  font-style: italic;
+  transition: opacity 0.2s ease;
+}
+
+.doc-selector input:focus::placeholder {
+  opacity: 0.5;
+}
+
+.doc-selector button {
+  height: 30px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 16px;
+  margin-bottom: 5px;
+  background-color: #1d66e6;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doc-selector button:hover {
+  background-color: #1654c0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(29, 102, 230, 0.2);
+}
+
+.doc-selector button:active {
+  background-color: #1144a0;
+  transform: translateY(0);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.doc-selector button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(29, 102, 230, 0.4);
+}
+
+.doc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.doc-list li {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #1a73e8;
+  transition: background-color 0.2s;
+}
+
+.doc-list li:hover {
+  background-color: #f1f3f4;
+}
+
+/* Espacio para que el editor no esté tapado por el panel */
+.main-editor {
+  margin-left: 240px; /* espacio para el panel lateral */
+  padding: 20px;
+}
